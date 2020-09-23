@@ -96,20 +96,21 @@ header, footer {
   flex-flow: row wrap;
 }
 
-header {
-  margin-top: 15px;
-}
-
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
+  margin: 15px 0;
+  width: 100%;
+}
+
+header a {
+  width: 68.75%;
 }
 
 header img {
-  width: 60%;
+  max-width: 220px;
 }
 
 header .header-divider {
@@ -135,7 +136,26 @@ footer p {
 }
 
 footer .content-wrapper {
-  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.contact, .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
 }
 
 footer .social-icons {
@@ -160,6 +180,10 @@ footer .social-icons p {
   flex-flow: row wrap;
 }
 
+.hero-area .content-wrapper {
+  width: 100%;
+}
+
 .content-wrapper h1 {
   margin: 0 20px;
 }
@@ -169,6 +193,11 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0 20px;
+}
+
+.form h3, .form input {
+  margin: 9px 0;
 }
 
 .features {
@@ -209,7 +238,7 @@ aside {
 
 /* ----- FAQ Page ----- */
 
-.faq {
+.faq .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,11 +261,17 @@ aside {
   flex-flow: row wrap;
 }
 
+.mission-content h1 {
+  margin: 0;
+}
+
 .contact-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
@@ -325,17 +360,94 @@ aside {
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
-   ========================================================================== */
+   ==========================================================================*/
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+
+  header a {
+    width: 28%;
+  }
+
+  header .content-wrapper {
+    margin: 28px 64px;
+    justify-content: space-between;
+  }
+
+  header .header-divider {
+    width: 10%;
+  }
+
+  header nav {
+    width: 30%;
+  }
+
+  .content-wrapper h1 {
+    margin: 0 64px;
+  }
+
+  aside .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 64px;
+  }
+
+  .form, .form-description {
+    width: 40%;
+  }
+
+  .features-items article {
+    width: 25%;
+    margin: 50px 12.5%;
+  }
+
+  footer .footer-content {
+    justify-content: space-between;
+    margin: 60px 120px;
+  }
+
+  .contact, .social {
+    width: 50%;
+  }
+
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 96px 64px;
+  }
+
+  .mission-content p {
+    width: 48%;
+  }
+
+  .contact-section .content-wrapper h1 {
+    margin: 0;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq {
+    justify-content: space-between;
+  }
+
+  .faq .content-wrapper {
+    flex-basis: 40%;
+  }
+
+  .faq h1 {
+    width: 100%;
+  }
+
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+
 }
 
 /* ==========================================================================
